@@ -66,8 +66,12 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-  res.send('Running Genius Car Server');
+  res.send('Running Genius Car Server in heroku');
 });
+
+app.get('/hello', (req, res) => {
+  res.send('hello updated here')
+})
 
 app.listen(port, () => {
   console.log('Running Genius Car Server on port', port);
